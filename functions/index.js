@@ -43,14 +43,18 @@ exports.newboard = functions.https.onRequest(function(req, res) {
       columns: messageTypes = [
         {
           id: 1,
-          value: 'Went well'
+          value: 'Start'
         },
         {
           id: 2,
-          value: 'To improve'
+          value: 'Stop'
         },
         {
           id: 3,
+          value: 'Continue'
+        },
+        {
+          id: 4,
           value: 'Action items'
         }
       ],

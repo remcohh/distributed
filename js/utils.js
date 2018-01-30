@@ -14,16 +14,24 @@ angular
       $('#' + id).find('textarea').focus();
     }
 
-    var messageTypes = [{
-      id: 1,
-      value: 'Went well'
-    }, {
-      id: 2,
-      value: 'To improve'
-    }, {
-      id: 3,
-      value: 'Action items'
-    }];
+    var messageTypes = [
+        {
+            id: 1,
+            value: 'Start'
+        },
+        {
+            id: 2,
+            value: 'Stop'
+        },
+        {
+            id: 3,
+            value: 'Continue'
+        },
+        {
+            id: 4,
+            value: 'Action items'
+        }
+    ];
 
     function getNextId(board) {
       return board.columns.slice(-1).pop().id + 1;
