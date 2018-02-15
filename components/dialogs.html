@@ -27,7 +27,70 @@
     <input class="toggle-checkbox" ng-model="newBoard.text_editing_is_private" type="checkbox" ng-checked="true"></input>
     <label>Private writing during card editing</label>
   <div>
-  <button ng-disabled="isBoardNameInvalid() || !isMaxVotesValid()" ng-click="createNewBoard()">Create</button>
+  <button ng-disabled="isBoardNameInvalid() || !isMaxVotesValid()" ng-click="createNewBoard()">Start Stop Continue</button>
+  <button ng-disabled="isBoardNameInvalid() || !isMaxVotesValid()" ng-click="createNewBoard([
+        {
+            id: 1,
+            value: 'Glad'
+        },
+        {
+            id: 2,
+            value: 'Mad'
+        },
+        {
+            id: 3,
+            value: 'Sad'
+        },
+        {
+            id: 4,
+            value: 'Action items'
+        }
+    ])">Glad Mad Sad</button>
+    <button ng-disabled="isBoardNameInvalid() || !isMaxVotesValid()" ng-click="createNewBoard([
+        {
+            id: 1,
+            value: 'Liked'
+        },
+        {
+            id: 2,
+            value: 'Lacked'
+        },
+        {
+            id: 3,
+            value: 'Longed for'
+        },
+        {
+            id: 4,
+            value: 'Learned'
+        },
+        {
+            id: 5,
+            value: 'Action items'
+        }
+    ])">Liked Lacked Longed for Learned</button>
+    <button ng-disabled="isBoardNameInvalid() || !isMaxVotesValid()" ng-click="createNewBoard([
+        {
+            id: 1,
+            value: 'Goal/Vision'
+        },
+        {
+            id: 2,
+            value: 'Rocks'
+        },
+        {
+            id: 3,
+            value: 'Anchor'
+        },
+        {
+            id: 4,
+            value: 'Wind'
+        },
+        {
+            id: 5,
+            value: 'Action items'
+        }
+    ])">Sailboat</button>
+
 </script>
 <script type="text/ng-template" id="deleteCard">
   <h1>Delete note</h1>

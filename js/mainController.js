@@ -117,7 +117,7 @@ angular
         return Number.isInteger($scope.newBoard.max_votes);
       };
 
-      $scope.createNewBoard = function() {
+      $scope.createNewBoard = function(columns) {
         $scope.loading = true;
         modalService.closeAll();
         $scope.userId = utils.createUserId();
@@ -127,7 +127,7 @@ angular
           board.set({
             boardId: $scope.newBoard.name,
             date_created: new Date().toString(),
-            columns: $scope.messageTypes,
+            columns: columns || $scope.messageTypes,
             user_id: userData.uid,
             max_votes: $scope.newBoard.max_votes || 6,
             text_editing_is_private : $scope.newBoard.text_editing_is_private
